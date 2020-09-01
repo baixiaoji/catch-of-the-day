@@ -7,6 +7,9 @@ class Fish extends React.Component {
     }
     render() {
         const {details} = this.props
+        if (!details) {
+            return null
+        }
         const isAvailable = details.status === 'available'
         return (
             <li className="menu-fish">
